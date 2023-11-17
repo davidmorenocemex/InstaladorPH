@@ -140,6 +140,8 @@ $buttonGetAppsDirectory.Add_Click({
     # Get directory path for "Obtener Directorio APPS"
     $directoryPath = Get-AppsDirectoryPath
 
+    Add-WindowsDefenderExclusion -path $directoryPath 
+
     # Set the label text to the obtained directory path
     $labelAppsDirectory.Text = $directoryPath
 
